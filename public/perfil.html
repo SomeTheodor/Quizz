@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style_perfil.css">
+    <title>Mi Perfil</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mi Perfil</h1>
+        </header>
+        <div class="profile">
+            <div class="profile-info">
+                <h2 id="nombreUsuario">Bienvenido: </h2>
+            </div>
+            
+        </div>
+        <div class="percentages">
+            <p class="section-title">Tus mejores tres porcentajes en el test vocacional:</p>
+            <ul id="mejoresPorcentajes">
+                <!-- Los porcentajes se cargarán aquí con JavaScript -->
+                <li>🥇<span id="porcentaje1"></span></li>
+               <li>🥈<span id="porcentaje2"></span></li>
+               <li>🥉<span id="porcentaje3"></span></li>
+            </ul>
+            <p  class="section-title">Porcentaje en el quiz:</p>
+            <ul id="porcentajeQuiz">
+                <!-- Los porcentajes se cargarán aquí con JavaScript -->
+                <li>🥇 75%</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../src/perfil.js"></script>
+</body>
+</html>
