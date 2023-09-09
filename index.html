@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina</title>
+    <link rel="stylesheet" href="/assets/css/estilo.css">
+</head>
+<body>
+    <section id="header">
+        <div class="header container">
+            <div class="nav-bar">
+                <div class="brand">
+                    <a href="#hero"><h1>EESTNº4</h1></a>
+                </div>
+                <div class="nav-list">
+                    <div class="hamburger active"><div class="bar"></div></div> 
+                    <ul class="active">
+                        <li><a href="#hero"data-after="Inicio">Inicio</a></li>
+                        <li><a href="#objetivo"data-after="Objetivos">Objetivos</a></li>
+                        <li><a href="#texto"data-after="Material">Material</a></li>
+                        <li><a href="#caracteristicas" data-after="Caracteristicas">Caracteristicas</a></li>
+                        <li><a href="#footer"data-after="Final">Final</a></li>
+                        <li>
+                            <a  id="loginButton" href="/public/login.html">Iniciar Sesion</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="/public/sticky_navbar.js"></script>
+        <script src="/src/changeButton.js"></script>
+    </section>
+
+    <section id="hero">
+        <div class="hero container">
+            <div>
+                <h1>Descubre<span></span></h1>
+                <h1>tu<span></span></h1>     
+                <h1>carrera<span></span></h1>        
+                <a href="/public/quiz.html" type="button" class="cta">Quizz</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="objetivo"><!--somos-proya-->
+        <div class="container">
+            <div class="img-container"></div>
+            <div class="texto">
+                <h2>sub<span class="color-acento">titulo</span></h2>
+                <p>El objetivo de esta esta pagina es que los <!--jovenes que quieran ingresar a la eestn4 o--> alumnos/as de la Tecnica n°4 en base a una guia de preguntas averiguen que carrera es la que les "favorece" para estudiar de 4to año en adelante.</p>
+            </div>
+        </div>
+    </section>
+    <section id="texto">
+            <p>En caso que haya realizado el quizz y esta conforme con los resultados, pero sin embargo no sabe por donde comenzar, les recomendamos que le de un vistazo al siguiente boton que le mostrara los principios de las dos carreras que le ofrece la Tecnica n°4.</p>
+            <div class="select-career">
+                <select id="mySelect">
+                    <option value="">Elija una opción</option>
+                    <option value="cont_programacion.html">Programacion</option>
+                    <option value="cont_informatica.html">Informatica</option>
+                </select>
+            </div>
+            <script src="public/app.js"></script>
+    </section>
+
+    <section id="caracteristicas">
+        <ul>
+            <li>✔️ Facilitar tu decision de profesion.</li>
+            <li>✔️ El quizz te tomara unos minutos en hacerlo.</li>
+        </ul>
+    </section>
+
+    <section id="footer">
+        <div class="footer container">
+            <div class="brand"><h1><span>EEST</span>Nº<span>4</span></h1></div>
+            <h2>contactenos</h2>
+            <div class="social-icon">
+                <div class="social-item">
+                    <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png"/></a> <!---1:55:00-->
+                </div>
+                <div class="social-item">
+                    <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png"/></a>
+                    <p></p>
+                </div>
+                <div class="social-item">
+                    <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png"/></a>
+                </div>
+                <div class="social-item">
+                    <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/phone.png"/></a> <!---1:42:00-->
+                </div>
+            </div>
+            <p>Copyright © 2023 Giordano. All rights reserved</p>
+        </div>
+    </section> 
+</body>
+</html>
