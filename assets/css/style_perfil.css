@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #00021d;
+    color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/* Estilos para el enlace "Cerrar Sesión" */
+.logout-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilos para el enlace "Cerrar Sesión" al pasar el cursor */
+.logout-link:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para los porcentajes */
+.percentages {
+    margin-top: 1em;
+}
+
+.percentages ul {
+    padding-left: 1.2em;
+}
+
+.percentages li{
+    list-style:none;
+    margin-top: 0.5em;
+}
+
+/* Estilos para el encabezado */
+header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    text-align: center;
+    color: #007bff;
+}
+
+/* Estilos para el nombre del usuario */
+#nombreUsuario {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0.5em;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 2em;
+    background: transparent;
+    border: 2px solid #007bff;
+    border-radius: 6px;
+}
+
+/* Estilos para la sección de porcentajes */
+.percentages {
+    margin-top: 2em;
+}
+
+/* Estilos para el título de sección */
+.section-title {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #007bff;
+}
+/* Agrega aquí más estilos modernos según tus preferencias */
