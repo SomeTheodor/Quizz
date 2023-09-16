@@ -16,7 +16,7 @@ body{
 
 main{
     min-height: 100vh;
-    background: url(img/fondo_quizz.jpg) no-repeat;
+    background: url(/assets/img/quiz.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
     pointer-events: auto;
