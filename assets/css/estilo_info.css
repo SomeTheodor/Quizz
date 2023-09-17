@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
-
+:root {
+    --clr: #0088cc; /* Cambia esto al color que desees */
+  }
 *{
     margin: 0;
     padding: 0;

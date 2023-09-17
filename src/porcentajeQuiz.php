@@ -14,21 +14,20 @@ if ($conn->connect_error) {
 }
 
 // Obtener los tres mejores porcentajes en el quiz para el usuario
-$PorcentajeTest = "SELECT redes, hardware, prog, base_datos, web FROM score WHERE user = '$user'";
-$resultPorcentajeTest = $conn->query($PorcentajeTest);
+$PorcentajeQuiz = "SELECT javascript, python, html, c, css FROM scorequiz WHERE user = '$user'";
+$resultPorcentajeQuiz = $conn->query($PorcentajeQuiz);
 
-if ($resultPorcentajeTest->num_rows > 0) {
-    $topThreePorcentajes = $resultPorcentajeTest->fetch_assoc();
-// Ahora $topThreePorcentajes contiene los tres mejores porcentajes en las áreas
+if ($resultPorcentajeQuiz->num_rows > 0) {
+    $topBestPorcentajes = $resultPorcentajeQuiz->fetch_assoc();
     
     // Crear un arreglo asociativo con los porcentajes
     $data = array(
-        "mejoresPorcentajes" => array(
-            "Redes" => $topThreePorcentajes['redes'],
-            "Hardware" => $topThreePorcentajes['hardware'],
-            "Programacion" => $topThreePorcentajes['prog'],
-            "Base de Datos" => $topThreePorcentajes['base_datos'],
-            "Web" => $topThreePorcentajes['web']
+        "porcentajeQuiz" => array(
+            "JavaScript" => $topBestPorcentajes['javascript'],
+            "Python" => $topBestPorcentajes['python'],
+            "HTML" => $topBestPorcentajes['html'],
+            "C" => $topBestPorcentajes['c'],
+            "CSS" => $topBestPorcentajes['css']
         )
     );
     // Convertir el arreglo en formato JSON y enviarlo como respuesta
@@ -37,6 +36,5 @@ if ($resultPorcentajeTest->num_rows > 0) {
 } else {
     echo "No se encontraron porcentajes para el usuario.";
 }
-
 $conn->close();
 ?>
