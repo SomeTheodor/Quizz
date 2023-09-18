@@ -24,26 +24,26 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // El usuario ya existe
-    echo "<script>alert('El nombre de usuario ya está registrado');window.location.href = 'login.html';</script>";
+    echo "<script>alert('El nombre de usuario ya está registrado');window.location.href = '/public/login.html';</script>";
     
 } else {
     if (strlen($usuario) < 8 || strlen($usuario) > 20) {
-        echo "<script>alert('El nombre de usuario debe tener entre 8 y 20 caracteres.');window.location.href = 'login.html'</script>";
+        echo "<script>alert('El nombre de usuario debe tener entre 8 y 20 caracteres.');window.location.href = '/public/login.html'</script>";
         exit;
     }
     // Validación de la contraseña (más de 8 caracteres y al menos un número)
     if (strlen($password2) <= 8 || !preg_match('/\d/', $password2)) {
-        echo "<script>alert('La contraseña debe tener más de 8 caracteres y al menos un número.');window.location.href = 'login.html'</script>";
+        echo "<script>alert('La contraseña debe tener más de 8 caracteres y al menos un número.');window.location.href = '/public/login.html'</script>";
         exit;
     } else {
         // Insertar el nuevo usuario en la tabla de usuarios
         $sql = "INSERT INTO usuarios (user, password) VALUES ('$usuario', '$password2')";
         if ($conn->query($sql) === true) {
             // Registro exitoso
-            echo "<script>alert('Registro exitoso. Ahora puedes iniciar sesión.');window.location.href = 'login.html';</script>";
+            echo "<script>alert('Registro exitoso. Ahora puedes iniciar sesión.');window.location.href = '/public/login.html';</script>";
         } else {
             // Error al insertar en la base de datos
-            echo "<script>alert('Error al registrar el usuario: " . $conn->error . "');window.location.href = 'login.html';</script>";
+            echo "<script>alert('Error al registrar el usuario: " . $conn->error . "');window.location.href = '/public/login.html';</script>";
         }
     }
 }

@@ -17,12 +17,14 @@ $data = json_decode(file_get_contents('php://input'), true);
         die("Conexión fallida: " . $conn->connect_error);
     }
 
-    // Obtener los datos del usuario
-    $js = isset($data['js']) ? $conn->real_escape_string($data['js']) : null;
-    $html = isset($data['html']) ? $conn->real_escape_string($data['html']) : null;
-    $python = isset($data['python']) ? $conn->real_escape_string($data['python']) : null;
-    $c = isset($data['c']) ? $conn->real_escape_string($data['c']) : null;
-    $css = isset($data['css']) ? $conn->real_escape_string($data['css']) : null;
+    // Obtener los datos del usuario 
+    // Definir los campos con valores predeterminados (0 si son nulos o indefinidos)
+$js = isset($data['js']) ? intval($data['js']) : 0;
+$html = isset($data['html']) ? intval($data['html']) : 0;
+$python = isset($data['python']) ? intval($data['python']) : 0;
+$c = isset($data['c']) ? intval($data['c']) : 0;
+$css = isset($data['css']) ? intval($data['css']) : 0;
+
     
     // Verificar si el usuario ya tiene un registro en la base de datos
     $user_query = "SELECT user FROM scorequiz WHERE user = '$user'";
@@ -31,19 +33,19 @@ $data = json_decode(file_get_contents('php://input'), true);
     if ($user_result->num_rows > 0) {
         $update_query = "UPDATE scorequiz SET ";
     
-        if ($js !== null) {
+        if ($js !== 0) {
             $update_query .= "javascript = '$js', ";
         }
-        if ($html !== null) {
+        if ($html !== 0) {
             $update_query .= "html = '$html', ";
         }
-        if ($python !== null) {
+        if ($python !== 0) {
             $update_query .= "python = '$python', ";
         }
-        if ($c !== null) {
+        if ($c !== 0) {
             $update_query .= "c = '$c', ";
         }
-        if ($css !== null) {
+        if ($css !== 0) {
             $update_query .= "css = '$css', ";
         }
     
@@ -58,7 +60,7 @@ $data = json_decode(file_get_contents('php://input'), true);
         }
     } else {
         if($user){
-        $insert_query = "INSERT INTO scorequiz (html, javascript, python, c, css, user) VALUES ('$html', '$javascript', '$python','$c', '$css','$user')";
+        $insert_query = "INSERT INTO scorequiz (html, javascript, python, c, css, user) VALUES ('$html', '$js', '$python','$c', '$css','$user')";
         if ($conn->query($insert_query) === true) {
             echo "Porcentajes guardados en la base de datos";
         } else {
