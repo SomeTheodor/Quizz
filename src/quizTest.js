@@ -378,7 +378,7 @@ let jsScore, pyScore, htmlScore;
         break;
         case "JS": jsScore = score;
         break;
-        case "C": cDatos = score;
+        case "C": cScore = score;
         break;
         case "CSS": cssScore = score;
         break;
