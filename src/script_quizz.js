@@ -136,7 +136,6 @@ function showResultBox(){
     quizBox.classList.remove('active');
     resultBox.classList.add('active');
 }
-// 1:23:40
 function enviarDatos(){
     calcularPorcentaje();
     const Data = {
