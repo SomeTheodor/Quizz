@@ -230,7 +230,7 @@ a{
 /*end header section*/
 /* hero section*/
 #hero{
-    background-image: url(/assets/img/compu.gif);
+    background-image: url(assets/img/compu.gif);
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -335,7 +335,7 @@ a{
 }
 
 #objetivo .img-container {
-    background-image: url(/assets/img/school.jpeg);
+    background-image: url(assets/img/school.jpeg);
     background-size: cover;
     background-position: center;
     height: 280px;
